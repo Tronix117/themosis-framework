@@ -156,12 +156,12 @@ class TaxField
      * @param \stdClass $term The term object passed by WordPress.
      * @ignore
      */
-    public function editFields(\stdClass $term)
+    public function editFields($term)
     {
         /*-----------------------------------------------------------------------*/
         // Output the custom fields
         /*-----------------------------------------------------------------------*/
-        TaxFieldRenderer::render('edit', $this->fields, $term);
+        TaxFieldRenderer::render('edit', $this->fields, (object)(array)$term);
     }
 
     /**
